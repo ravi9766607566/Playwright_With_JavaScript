@@ -39,3 +39,50 @@ for(let i=0; i<marks.length; i++)
     sum = sum + marks[i]
 }
 console.log("Sum:", sum)
+
+//reduce filter map
+let total =marks.reduce((sum,mark)=>sum+mark,0)
+console.log(total)
+
+var scores = [12,13,14,16]
+//create new array with even numbers of scores and multiply each value with 3 array [12,14,16]
+// with 3 and sum them array [12.14,16]
+//Method1
+var evenScrores =[]
+for(let i=0; i<scores.length; i++)
+{
+
+    if(scores[i]%2 == 0)
+    {
+        evenScrores.push(scores[i])
+    }
+}
+console.log(evenScrores)
+
+//Method2
+let newFilterEvenScscores=scores.filter(score=>score%2==0)
+console.log(newFilterEvenScscores) //[12,14,16]=>[36,52,48]
+
+//map
+let mappedArray=newFilterEvenScscores.map(score=>score*3)
+console.log(mappedArray)
+let totalval=mappedArray.reduce((sum,val)=>sum+val,0)
+console.log(totalval)
+
+var scores1 = [12,13,14,16]
+let sumValue=scores1.filter(score=>score%2==0).map(score=>score*3).reduce((sum,val)=>sum+val,0)
+console.log(sumValue)
+
+let fruits=["banana", "mango", "apple", "orange"]
+//fruits.sort() //sorts the array in ascending order
+console.log(fruits.sort()) // [ 'apple', 'banana', 'orange', 'mango' ]
+console.log(fruits.reverse()) //reverses the array
+
+
+var scores1 = [12,3,19,16,14]
+// console.log(scores1.sort())
+// scores1.sort(function(a,b){
+//     return a-b
+// })
+console.log(scores1.sort((a,b)=>a-b)) //ascending order
+
