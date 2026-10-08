@@ -1,3 +1,4 @@
+  const Person = require('./basics7')
 let day = 'tuesday '
 console.log(day.length) //length of string : 8
 console.log(day[1]) //first character of string : u
@@ -32,3 +33,8 @@ while(value!== -1)
 
 }
 console.log(count) //2
+
+
+let person = new Person("Chris","Edward")
+console.log(person.fullName())
+
